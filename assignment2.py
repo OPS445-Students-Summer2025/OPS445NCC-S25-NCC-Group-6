@@ -29,7 +29,7 @@ import subprocess  # needed to run system commands (iptables commands)
 
 # I will keep the rules in a list for now. 
 # Later, Purav will handle saving to JSON files.
-rules_list = []
+rules_list = firewall_json.rules_list
 
 def show_menu():
     """Just prints the simple menu for testing my part only."""
