@@ -2,13 +2,26 @@
 
 # ======================================================
 # OPS445 Assignment 2 - Group Project
-# Author: Dhruv Thakar
-# Part: Create a new iptables rule (Menu Option 1)
+# Author: Dhruv Thakar 154195226 dnthakar
+# Part: Implemented interactive menu for firewall management:
+#       1) Create new iptables rule
+#       2) Apply all stored rules to the system
+#       3) Flush all existing iptables rules
 # ======================================================
-# - My job is to allow the user to enter details for a new
-# - firewall rule in a simple meunu-driven interface.
-# I also added functions to apply these rules to the system
-# and to flush all existing iptables rules.
+#   My work in group project:
+# - Built an interactive menu for testing and using firewall rules.
+# - Added a feature to create new iptables rules by asking the user
+#   for protocol, source IP, destination IP, and action (ACCEPT/DROP/REJECT).
+# - If the user types “any” or leaves IP blank, I default it to 0.0.0.0/0.
+# - Added a feature to apply all the rules to the system using `iptables`.
+# - Added a feature to flush (clear) all current iptables rules from the system.
+# - The program loops with a simple menu so we can keep creating, applying,
+#   or flushing rules until we exit.
+# ======================================================
+# References:
+# - iptables manual pages: https://linux.die.net/man/8/iptables
+# - Python subprocess module: https://docs.python.org/3/library/subprocess.html
+# - Python input() function: https://docs.python.org/3/library/functions.html#input
 # ======================================================
 
 import sys  # needed to exit the program
